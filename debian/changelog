@@ -1,4 +1,4 @@
-glshim (0.41+git20150911.42a7739-0) UNRELEASED; urgency=medium
+glshim (0.41+git20150911.42a7739-0) jessie; urgency=medium
 
   * Initial release
 
