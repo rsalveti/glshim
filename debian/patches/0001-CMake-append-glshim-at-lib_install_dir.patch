@@ -1,0 +1,28 @@
+From b2579339a81b1a667ca31ec759b46c91bd1b3169 Mon Sep 17 00:00:00 2001
+From: Ricardo Salveti <ricardo.salveti@linaro.org>
+Date: Mon, 16 Nov 2015 23:37:07 -0200
+Subject: [PATCH] CMake: append glshim at lib_install_dir
+
+To avoid conflicting with other libGL providers.
+
+Signed-off-by: Ricardo Salveti <ricardo.salveti@linaro.org>
+---
+ CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 8114a17..919abf2 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -13,7 +13,7 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
+ endif()
+ 
+ set(BIN_INSTALL_DIR bin)
+-set(LIB_INSTALL_DIR lib/${CMAKE_LIBRARY_ARCHITECTURE})
++set(LIB_INSTALL_DIR lib/${CMAKE_LIBRARY_ARCHITECTURE}/glshim)
+ 
+ set(INSTALL_TARGETS_DEFAULT_ARGS RUNTIME DESTINATION "${BIN_INSTALL_DIR}"
+                                  LIBRARY DESTINATION "${LIB_INSTALL_DIR}"
+-- 
+2.5.0
+

@@ -1,0 +1,18 @@
+Source: glshim
+Section: libs
+Priority: extra
+Maintainer: Ricardo Salveti <ricardo.salveti@linaro.org>
+Build-Depends: debhelper (>= 9),
+               cmake,
+               libx11-dev
+Standards-Version: 3.9.6
+Homepage: https://github.com/lunixbochs/glshim
+Vcs-Git: https://github.com/rsalveti/glshim
+Vcs-Browser: https://github.com/rsalveti/glshim
+
+Package: glshim
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Shim that translates OpenGL 1.x into OpenGL ES.
+ This is a shim providing OpenGL 1.x functionality to OpenGL ES accelerated
+ cards.

@@ -1,0 +1,2 @@
+0001-CMake-make-it-multiarch-friendly.patch
+0001-CMake-append-glshim-at-lib_install_dir.patch
